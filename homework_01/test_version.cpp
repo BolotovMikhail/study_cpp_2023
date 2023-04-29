@@ -3,5 +3,5 @@
 #include <gtest/gtest.h>
 
 TEST(CheckVersionTest, CheckVersionSuccess) {
-  ASSERT_TRUE(version() > 0);
+  ASSERT_TRUE(version() < 0);
 }
