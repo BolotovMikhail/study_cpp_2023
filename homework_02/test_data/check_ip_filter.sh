@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-EXPECTED_HASH="24e7a7b2270daee89c64d3ca5fb3da1a -"
+EXPECTED_HASH="24e7a7b2270daee89c64d3ca5fb3da1a"
 ACTUAL_HASH=$(cat test_data/ip_filter.tsv | ./homework_02/ip_filter | md5sum | awk '{print $1}')
 
 if [ "$ACTUAL_HASH" != "$EXPECTED_HASH" ]; then
