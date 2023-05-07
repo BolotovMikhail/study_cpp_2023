@@ -25,6 +25,9 @@ target_link_libraries(ip_filter_tests
     ${GTEST_MAIN_LIBRARIES}
 )
 
+configure_file(test_data/ip_filter.tsv
+    ${CMAKE_BINARY_DIR}/test_data/ip_filter.tsv COPYONLY)
+
 install(TARGETS ip_filter RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
