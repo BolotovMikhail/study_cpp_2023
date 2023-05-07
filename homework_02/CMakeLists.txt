@@ -27,6 +27,8 @@ target_link_libraries(ip_filter_tests
 
 configure_file(test_data/ip_filter.tsv
     ${CMAKE_BINARY_DIR}/test_data/ip_filter.tsv COPYONLY)
+configure_file(check_ip_filter.sh
+    ${CMAKE_BINARY_DIR}/check_ip_filter.sh COPYONLY)
 
 install(TARGETS ip_filter RUNTIME DESTINATION bin)
 
