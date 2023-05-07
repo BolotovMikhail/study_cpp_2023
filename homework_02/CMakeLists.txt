@@ -2,8 +2,6 @@ project(homework2 VERSION ${PROJECT_VESRION})
 
 find_package(GTest REQUIRED)
 
-#set (HELPERS_SRC "${CMAKE_CURRENT_SOURCE_DIR}/helpers/ip_filter_comporators.cpp")
-
 add_executable(ip_filter
                ip_filter.cpp)
 
