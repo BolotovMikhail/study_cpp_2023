@@ -57,7 +57,7 @@ TEST_F(IpFilter, ReverseLexicographicallySortSuccess)
 
 TEST_F(IpFilter, FilterIpPoolByFirstByteSuccess)
 {
-    constexpr ip_tuple FilterByFirstByte{
+    constexpr ip_array FilterByFirstByte{
         Byte2, AnyByte, AnyByte, AnyByte};
 
     const ip_pool ExpectedIpPool = {
@@ -76,7 +76,7 @@ TEST_F(IpFilter, FilterIpPoolByFirstByteSuccess)
 
 TEST_F(IpFilter, FilterEmptyIpPoolSuccess)
 {
-    constexpr ip_tuple FilterByFirstByte{
+    constexpr ip_array FilterByFirstByte{
         Byte2, AnyByte, AnyByte, AnyByte};
 
     const ip_pool EmptyIpPool = {};
@@ -90,7 +90,7 @@ TEST_F(IpFilter, FilterEmptyIpPoolSuccess)
 
 TEST_F(IpFilter, FilterIpPoolByAllBytesSuccess)
 {
-    constexpr ip_tuple FilterByAllBytes{
+    constexpr ip_array FilterByAllBytes{
         Byte2, Byte7, Byte8, Byte3};
     
     const ip_pool ExpectedIpPool = {
@@ -106,7 +106,7 @@ TEST_F(IpFilter, FilterIpPoolByAllBytesSuccess)
 
 TEST_F(IpFilter, FilterIpPoolByAnyBytesSuccess)
 {
-    constexpr ip_tuple FilterByAnyBytes{
+    constexpr ip_array FilterByAnyBytes{
         AnyByte, AnyByte, AnyByte, AnyByte};
     
     const ip_pool ExpectedIpPool = ipPool;
@@ -119,7 +119,7 @@ TEST_F(IpFilter, FilterIpPoolByAnyBytesSuccess)
 
 TEST_F(IpFilter, FilterIpPoolByIncorrectBytesSuccess)
 {
-    constexpr ip_tuple FilterByIncorrectBytes{
+    constexpr ip_array FilterByIncorrectBytes{
         IncorrectByte, AnyByte, IncorrectByte, AnyByte};
     
     const ip_pool ExpectedIpPool = {};

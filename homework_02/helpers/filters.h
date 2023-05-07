@@ -2,50 +2,47 @@
 
 #include "helpers.h"
 
-void ReverseLexicographicallySort(ip_pool& ipTuples);
-void ReverseLexicographicallySort(ip_pool& ipTuples)
+inline void ReverseLexicographicallySort(ip_pool& ipTuples)
 {
-    std::sort(ipTuples.begin(), ipTuples.end(), std::greater<ip_tuple>());
+    std::sort(ipTuples.begin(), ipTuples.end(), std::greater<ip_array>());
 }
 
-ip_pool FilterIpPool(const ip_pool& IpPool, const ip_tuple& Filter);
-ip_pool FilterIpPool(const ip_pool& IpPool, const ip_tuple& Filter)
+inline ip_pool FilterIpPool(const ip_pool& IpPool, const ip_array& Filter)
 {
     ip_pool filteredIpPool;
 
     for (const auto& Ip : IpPool)
     {
-        if ((std::get<0>(Filter) == AnyByte ||
-                std::get<0>(Ip) == std::get<0>(Filter)) &&
-            (std::get<1>(Filter) == AnyByte ||
-                std::get<1>(Ip) == std::get<1>(Filter)) &&
-            (std::get<2>(Filter) == AnyByte ||
-                std::get<2>(Ip) == std::get<2>(Filter)) &&
-            (std::get<3>(Filter) == AnyByte ||
-                std::get<3>(Ip) == std::get<3>(Filter)))
+        if ((Filter.at(0) == AnyByte ||
+                Ip.at(0) == Filter.at(0)) &&
+            (Filter.at(1) == AnyByte ||
+                Ip.at(1) == Filter.at(1)) &&
+            (Filter.at(2) == AnyByte ||
+                Ip.at(2) == Filter.at(2)) &&
+            (Filter.at(3) == AnyByte ||
+                Ip.at(3) == Filter.at(3)))
         {
-            filteredIpPool.emplace_back(Ip);
+            filteredIpPool.push_back(Ip);
         }
     }
 
-    return std::move(filteredIpPool);
+    return filteredIpPool;
 }
 
-ip_pool FilterIpPoolByAny(const ip_pool& IpPool, const unsigned int value);
-ip_pool FilterIpPoolByAny(const ip_pool& IpPool, const unsigned int value)
+inline ip_pool FilterIpPoolByAny(const ip_pool& IpPool, const int Value)
 {
     ip_pool filteredIpPool;
 
     for (const auto& Ip : IpPool)
     {
-        if (std::get<0>(Ip) == value ||
-            std::get<1>(Ip) == value ||
-            std::get<2>(Ip) == value ||
-            std::get<3>(Ip) == value)
+        if (Ip.at(0) == Value ||
+            Ip.at(1) == Value ||
+            Ip.at(2) == Value ||
+            Ip.at(3) == Value)
         {
-            filteredIpPool.emplace_back(Ip);
+            filteredIpPool.push_back(Ip);
         }
     }
 
-    return std::move(filteredIpPool);
+    return filteredIpPool;
 }

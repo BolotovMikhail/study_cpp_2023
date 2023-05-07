@@ -1,22 +1,21 @@
 #pragma once
 
 #include <iostream>
-#include <tuple>
+#include <array>
 #include <vector>
 
-using ip_tuple = std::tuple<int, int, int, int>;
-using ip_pool = std::vector<ip_tuple>;
+using ip_array = std::array<int, 4>;
+using ip_pool = std::vector<ip_array>;
 
 constexpr auto AnyByte{-1};
 
-void PrintIpPool(const ip_pool& IpPool);
-void PrintIpPool(const ip_pool& IpPool)
+inline void PrintIpPool(const ip_pool& IpPool)
 {
     for (const auto& Ip : IpPool)
     {
-        std::cout << std::get<0>(Ip) << "." \
-            << std::get<1>(Ip) << "." \
-            << std::get<2>(Ip) << "." \
-            << std::get<3>(Ip) << '\n';
+        std::cout << Ip.at(0) << "." \
+            << Ip.at(1) << "." \
+            << Ip.at(2) << "." \
+            << Ip.at(3) << '\n';
     }
 }

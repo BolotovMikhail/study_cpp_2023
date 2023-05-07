@@ -7,8 +7,8 @@
 const std::regex IpPattern(R"((\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3}))");
 
 namespace {
-constexpr ip_tuple FilterByFirstByte{1, AnyByte, AnyByte, AnyByte};
-constexpr ip_tuple FilterByFirstAndSecondByte{46, 70, AnyByte, AnyByte};
+constexpr ip_array FilterByFirstByte{1, AnyByte, AnyByte, AnyByte};
+constexpr ip_array FilterByFirstAndSecondByte{46, 70, AnyByte, AnyByte};
 constexpr unsigned int Byte46{46};
 }
 
@@ -16,17 +16,17 @@ int main()
 {
     try
     {
-        std::vector<ip_tuple> ipPool;
+        ip_pool ipPool;
 
         std::smatch matches;
         for(std::string line; std::getline(std::cin, line);)
         {
             std::regex_search(line, matches, IpPattern);
-            ipPool.emplace_back(
+            ipPool.emplace_back(std::array<int, 4>{
                 std::stoi(matches[1]),
                 std::stoi(matches[2]),
                 std::stoi(matches[3]),
-                std::stoi(matches[4]));
+                std::stoi(matches[4])});
         }
 
         // 1. all ip in reverse lexicographically sort
