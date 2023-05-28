@@ -5,17 +5,19 @@ template <class T, int Count>
 struct map_pool_allocator
 {
     using value_type = T;
-
-    void* m_pool{nullptr};
-    static constexpr std::size_t m_PoolSize{Count};
-
-    size_t shift{0};
+    using propagate_on_container_copy_assignment = std::true_type;
+    using propagate_on_container_move_assignment = std::true_type;
+    using propagate_on_container_swap = std::true_type;
 
     map_pool_allocator () noexcept { }
 
-    map_pool_allocator (const map_pool_allocator<T, Count>& a) noexcept
+    map_pool_allocator (const map_pool_allocator<T, Count>& other)
     {
-        m_pool = a.m_pool;
+        if (other.get_capacity() > get_capacity())
+        {
+            throw std::bad_alloc();
+        }
+        m_pool = other.m_pool;
     }
 
     T* allocate(std::size_t n)
@@ -55,9 +57,15 @@ struct map_pool_allocator
         typedef map_pool_allocator<U, Count> other;
     };
 
-    using propagate_on_container_copy_assignment = std::true_type;
-    using propagate_on_container_move_assignment = std::true_type;
-    using propagate_on_container_swap = std::true_type;
+private:
+    void* m_pool{nullptr};
+    static constexpr std::size_t m_PoolSize{Count};
+    std::size_t shift{0};
+
+    std::size_t get_capacity()
+    {
+        return m_PoolSize;
+    }
 };
 
 template <class T, class U, int Count>
