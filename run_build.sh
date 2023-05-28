@@ -10,3 +10,4 @@ cd build
 cmake ..
 make
 cd ..
+./build/homework_03/map_pool_allocator
