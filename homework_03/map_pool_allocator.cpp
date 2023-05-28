@@ -68,14 +68,14 @@ private:
     }
 };
 
-template <class T, class U, int Count>
-constexpr bool operator== (const map_pool_allocator<T, Count>& a1, const map_pool_allocator<U, Count>& a2) noexcept
+template <class T, int Count>
+constexpr bool operator== (const map_pool_allocator<T, Count>& a1, const map_pool_allocator<T, Count>& a2) noexcept
 {
     return a1.pool == a2.pool;
 }
 
-template <class T, class U, int Count>
-constexpr bool operator!= (const map_pool_allocator<T, Count>& a1, const map_pool_allocator<U, Count>& a2) noexcept
+template <class T, int Count>
+constexpr bool operator!= (const map_pool_allocator<T, Count>& a1, const map_pool_allocator<T, Count>& a2) noexcept
 {
     return a1.pool != a2.pool;
 }
