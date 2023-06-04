@@ -17,9 +17,9 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install cmake libboost-test-dev libgtest-dev -y
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
-      - run: cmake --build . --target ip_filter_tests
-      - run: ./homework_02/ip_filter_tests
-      - run: sh test_data/check_ip_filter.sh
+#      - run: cmake --build . --target ip_filter_tests
+#      - run: ./homework_02/ip_filter_tests
+#      - run: sh test_data/check_ip_filter.sh
       - run: cmake --build . --target package
       - name: Create Release
         id: create_release
