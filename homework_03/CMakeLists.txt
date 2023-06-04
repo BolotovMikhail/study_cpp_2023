@@ -1,9 +1,9 @@
 project(homework3 VERSION ${PROJECT_VESRION})
 
-set(TARGET map_pool_allocator)
+set(TARGET main)
 
 add_executable(${TARGET}
-               map_pool_allocator.cpp)
+               main.cpp)
 
 set_target_properties(${TARGET} PROPERTIES
     CXX_STANDARD 17
@@ -12,6 +12,7 @@ set_target_properties(${TARGET} PROPERTIES
 
 target_include_directories(${TARGET}
     PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/helpers"
+            "${CMAKE_CURRENT_SOURCE_DIR}/helpers/custom_container"
 )
 
 install(TARGETS ${TARGET} RUNTIME DESTINATION bin)
