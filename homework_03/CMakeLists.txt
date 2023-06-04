@@ -12,7 +12,6 @@ set_target_properties(${TARGET} PROPERTIES
 
 target_include_directories(${TARGET}
     PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/helpers"
-            "${CMAKE_CURRENT_SOURCE_DIR}/helpers/custom_container"
 )
 
 install(TARGETS ${TARGET} RUNTIME DESTINATION bin)

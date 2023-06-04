@@ -91,11 +91,6 @@ using map = std::map<TKey, TValue, std::less<TKey>,
     map_pool_allocator<std::pair<const TKey, TValue>, Count>>;
 } // namespace custom
 
-
-
-
-
-
 template <class T, int Count>
 struct custom_container_pool_allocator
 {
