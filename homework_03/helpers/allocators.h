@@ -45,13 +45,13 @@ struct map_pool_allocator
 
     void deallocate (T* p, std::size_t n)
     {
-        // free all memory at once
-        if (m_pool)
+        if (m_PoolSize == 1)
         {
             std::cout << "Deallocate memory pool\n";
             ::operator delete(m_pool);
             m_pool = nullptr;
         }
+        m_PoolSize -= n;
     }
 
     template <class U>
@@ -67,7 +67,7 @@ struct map_pool_allocator
 
 private:
     void* m_pool{nullptr};
-    static constexpr std::size_t m_PoolSize{Count};
+    std::size_t m_PoolSize{Count};
     std::size_t shift{0};
 };
 

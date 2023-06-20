@@ -37,6 +37,14 @@ with custom allocator and fill it:" << "\n";
             std::cout << "Key: " << key << ", Value: " << value << "\n";
         }
     }
+
+    {
+        map_pool_allocator<int, 10> alloc;
+        auto a =  alloc.allocate(1);
+        auto b =  alloc.allocate(1);
+        alloc.deallocate(a, 1);
+        *b = 42;
+    }
 }
 
 inline void CustomContainerCase()
