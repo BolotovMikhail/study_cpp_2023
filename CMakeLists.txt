@@ -7,4 +7,5 @@ project(study_cpp_2023 VERSION ${PROJECT_VESRION})
 
 #add_subdirectory(homework_01)
 #add_subdirectory(homework_02)
-add_subdirectory(homework_03)
+#add_subdirectory(homework_03)
+add_subdirectory(homework_04)
