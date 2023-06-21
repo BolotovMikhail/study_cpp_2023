@@ -10,4 +10,3 @@ cd build
 cmake ..
 make
 cd ..
-./build/homework_04/main

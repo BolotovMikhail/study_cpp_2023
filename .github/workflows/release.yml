@@ -41,6 +41,7 @@ jobs:
           asset_path: ./study_cpp_2023-0.0.${{ github.run_number }}-Linux.deb
           asset_name: study_cpp_2023-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
+
   build-documentation:
     runs-on: ubuntu-latest
 
