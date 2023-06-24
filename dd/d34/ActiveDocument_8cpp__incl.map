@@ -1,0 +1,20 @@
+<map id="homework_05/graphics_editor/model/data/document/ActiveDocument.cpp" name="homework_05/graphics_editor/model/data/document/ActiveDocument.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="118,5,307,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="116,109,187,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,63,170,98,166,95,191,60"/>
+<area shape="rect" id="Node000003" href="$d7/d94/ActiveDocument_8h.html" title=" " alt="" coords="212,109,339,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,60,260,95,256,98,230,63"/>
+<area shape="rect" id="Node000004" href="$d6/d14/IDocument_8h.html" title=" " alt="" coords="5,183,100,208"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="238,138,105,180,103,175,237,133"/>
+<area shape="rect" id="Node000006" href="$d7/d5d/Primitive_8h.html" title=" " alt="" coords="124,183,288,208"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="266,137,230,174,226,170,262,133"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="312,183,380,208"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="289,133,325,170,322,174,285,137"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="404,183,450,208"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="302,133,392,175,390,180,300,138"/>
+<area shape="rect" id="Node000005" href="$d8/dbb/properties_8h.html" title=" " alt="" coords="30,256,118,282"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="59,208,69,241,64,243,53,209"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="185,211,110,251,107,247,182,207"/>
+<area shape="rect" id="Node000007" href="$d2/d4c/IPrimitive_8h.html" title=" " alt="" coords="163,256,249,282"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="209,209,209,241,203,241,203,209"/>
+</map>

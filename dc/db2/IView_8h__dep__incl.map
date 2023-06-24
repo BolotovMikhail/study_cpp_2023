@@ -1,0 +1,20 @@
+<map id="homework_05/graphics_editor/view/IView.h" name="homework_05/graphics_editor/view/IView.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="362,5,517,46"/>
+<area shape="rect" id="Node000002" href="$da/de2/IModel_8h.html" title=" " alt="" coords="270,94,425,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="410,58,370,96,366,92,406,54"/>
+<area shape="rect" id="Node000008" href="$dd/df9/EditorView_8h.html" title=" " alt="" coords="449,94,616,135"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="473,54,513,92,510,96,469,58"/>
+<area shape="rect" id="Node000003" href="$d9/db1/EditorModel_8h.html" title=" " alt="" coords="257,183,438,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="350,149,350,182,345,182,345,149"/>
+<area shape="rect" id="Node000004" href="$d2/d41/EditorController_8h.html" title=" " alt="" coords="122,271,341,312"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="311,235,259,273,256,269,308,230"/>
+<area shape="rect" id="Node000007" href="$d3/d40/EditorModel_8cpp.html" title=" " alt="" coords="366,271,561,312"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="387,230,439,269,436,273,384,235"/>
+<area shape="rect" id="Node000005" href="$d6/d4e/EditorController_8cpp.html" title=" " alt="" coords="5,360,239,401"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="197,323,148,362,145,357,194,319"/>
+<area shape="rect" id="Node000006" href="$da/dc1/homework__05_2main_8cpp.html" title=" " alt="" coords="263,368,421,393"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="269,319,328,365,325,369,266,323"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="479,144,390,185,388,180,477,139"/>
+<area shape="rect" id="Node000009" href="$d5/d71/EditorView_8cpp.html" title=" " alt="" coords="462,183,643,223"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="543,149,551,182,546,183,538,150"/>
+</map>
